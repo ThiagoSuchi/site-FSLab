@@ -1,0 +1,524 @@
+/*----------- GERAL -----------*/
+* {
+
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Inter",
+    sans-serif;
+}
+
+:root {
+    --cor-fundo: #EEECEC;
+    --cor-cabecalho: #373736;
+    --cor-cabecalho-li: rgb(222, 220, 220);
+    --cor-sombreamento: #3c3c3b;
+    --cor-quemSomos: #F3F3F3;
+    --cor-padrao: black;
+    --cor-form: #D9D9D9;
+    --cor-footer: #575756;
+}
+
+html,
+body {
+    background-color: var(--cor-fundo);
+    overflow-x: hidden;
+}
+
+
+/*----------- CABEÇALHO -------------*/
+
+.cabecalho-menu {
+    padding: 27px 20px;
+    background-color: var(--cor-cabecalho);
+}
+
+.cabecalho-menu nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho-menu nav a {
+    color: var(--cor-cabecalho-li);
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.cabecalho-menu nav a::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 0.5px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.2s ease-in-out;
+}
+
+.cabecalho-menu nav a:hover::after {
+    width: 50%;
+}
+
+/*------------- TOPO SITE --------------*/
+
+.obscure {
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-color: var(--cor-sombreamento);
+    z-index: 2;
+}
+
+#fslab {
+    position: absolute;
+    z-index: 3;
+}
+
+.FSLab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 512px;
+    z-index: 1;
+
+    background-image: url(./imgs/pexels-christina-morillo-1181244\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*------------------ Projetos Desenvolvidos -------------------*/
+
+.projetos {
+    padding: 47px 77px;
+}
+
+.titulo>h2 {
+    position: relative;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.titulo>h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--cor-padrao);
+    border-radius: 2px;
+}
+
+.container {
+    background-color: var(--cor-padrao);
+    display: grid;
+    grid-template-areas:
+        'PD1 PD2 PD3 PD3'
+        'PD4 PD4 PD3 PD3'
+        'PD4 PD4 PD5 PD6';
+    height: 675px;
+    gap: 7px;
+}
+
+.container div {
+    background-color: white;
+    border: 2px solid gray;
+    position: relative;
+    overflow: hidden;
+}
+
+.container div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/*-----PD1-----*/
+#PD1 {
+    grid-area: PD1;
+    transition: .3s ease-in-out;
+}
+
+#PD1:hover {
+    transform: scale(1.04);
+}
+
+/*-----PD2-----*/
+#PD2 {
+    grid-area: PD2;
+    transition: .3s ease-in-out;
+}
+
+#PD2:hover {
+    transform: scale(1.04);
+}
+
+/*-----PD3-----*/
+#PD3 {
+    grid-area: PD3;
+    transition: .3s ease-in-out;
+}
+
+#PD3:hover {
+    transform: scale(1.02);
+}
+
+/*-----PD4-----*/
+#PD4 {
+    grid-area: PD4;
+    transition: .3s ease-in-out;
+}
+
+#PD4:hover {
+    transform: scale(1.02);
+}
+
+/*-----PD5-----*/
+#PD5 {
+    grid-area: PD5;
+    transition: .3s ease-in-out;
+}
+
+#PD5:hover {
+    transform: scale(1.04);
+}
+
+/*-----PD6-----*/
+#PD6 {
+    grid-area: PD6;
+    transition: .3s ease-in-out;
+}
+
+#PD6:hover {
+    transform: scale(1.04);
+}
+
+/*---------------- QUEM SOMOS ------------------*/
+
+.quem-somos {
+    display: flex;
+    align-items: center;
+    height: 549px;
+    background-color: var(--cor-quemSomos);
+}
+
+.projetos1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.projetos1 img {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    border: 1px solid var(--cor-fundo);
+}
+
+.projetos1 img:hover {
+    transform: scale(1.00);
+    border: 1px solid var(--cor-padrao);
+}
+
+.titulo-quem-somos {
+    margin-right: 80px;
+}
+
+.quem-somos p {
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.quem-somos h2 {
+    margin-top: -90px;
+    margin-bottom: 34px;
+}
+
+/*--------------- FAQ ---------------*/
+
+.titulo-FAQ div {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px;
+    gap: 8px;
+}
+
+.titulo-FAQ div button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-form);
+
+    font-size: 20px;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.titulo-FAQ div button:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.titulo-FAQ div button p {
+    padding-left: 30px;
+}
+
+.titulo-FAQ div button img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+
+.titulo-FAQ div button img:hover {
+    transform: scale(1.06);
+}
+
+/*-------------------- EQUIPE --------------------*/
+
+.equipe {
+    background-color: var(--cor-quemSomos);
+}
+
+.perfils img {
+    margin: 0 3px 40px;
+    width: 470px;
+    border: 1px solid var(--cor-quemSomos);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.perfils img:hover {
+    border: 1px solid var(--cor-padrao);
+    border-radius: 10px;
+}
+
+.icon-perfil {
+    display: grid;
+    grid-template-columns: repeat(14, 100px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-perfil img {
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.icon-perfil img:hover {
+    background-color: rgb(203, 200, 200);
+    border-radius: 10px;
+    transform: scale(1.03);
+}
+
+.titulo-sem-traco h2 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+/*------------------ FALE CONOSCO -------------------*/
+
+.fale-conosco {
+    height: 611px;
+}
+
+/*------------------ FOOTER ----------------------*/
+
+.footer {
+    background-color: var(--cor-footer);
+    height: 208px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos-footer img {
+    margin: 0 80px 0;
+}
+
+#img1 {
+    width: 252px;
+    height: 62px;
+}
+
+#img2 {
+    width: 140px;
+    height: 65px;
+}
+
+
+
+/************************ RESPONSIVIDADE ************************/
+
+@media screen and (max-width: 1440px) {
+
+    /*--------- QUEM SOMOS ---------*/
+    #video {
+        width: 700px;
+    }
+
+    .quem-somos h2 {
+        margin-bottom: 10px;
+    }
+
+    .quem-somos p {
+        font-size: 16px;
+        padding-top: 16px;
+    }
+
+    /*--------- EQUIPE ---------*/
+    .perfils img {
+        width: 300px;
+    }
+
+    .icon-perfil {
+        display: grid;
+        grid-template-columns: repeat(14, 80px);
+    }
+
+    .icon-perfil img {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+
+    /*--------- QUEM SOMOS ---------*/
+    .quem-somos {
+        height: 800px;
+    }
+
+    .quem-somos img {
+        margin-top: 50px;
+        margin-bottom: -90px;
+    }
+
+    .projetos1 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .quem-somos p {
+        padding-top: 15px;
+    }
+
+    .quem-somos h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /*---------- CABECALHO MENU ------------*/
+    .cabecalho-menu nav ul {
+        gap: 20px;
+    }
+    
+    .cabecalho-menu nav ul li a {
+        padding-left: 10px;
+    }
+
+    /*--------- TOPO SITE ----------*/
+    #fslab {
+        width: 230px;
+    }
+
+    /*--------- QUEM SOMOS ---------*/
+    .quem-somos .titulo {
+        width: 90%;
+        padding-left: 90px;
+    }
+
+    .quem-somos img {
+        margin-top: 30px;
+        margin-bottom: -70px;
+    }
+
+    /*--------- EQUIPE ---------*/
+    .perfils img {
+        width: 200px;
+    }
+
+    .icon-perfil img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .titulo h2 {
+        font-size: 20px;
+    }
+
+    /*--------- CABECALHO MENU ----------*/
+    .cabecalho-menu nav ul li a {
+        font-size: 14px;
+    }
+
+    /*--------- QUEM SOMOS ---------*/
+    .quem-somos {
+        display: flex;
+        justify-content: center;
+        height: 750px;
+    }
+
+    .quem-somos .titulo {
+        width: 500px;
+        padding-left: 5%;
+    }
+
+    .quem-somos #video {
+        width: 70%;
+    }
+
+    /*----------- FAQ -----------*/
+    .FAQ {
+        display: flex;
+        align-items: center;
+        height: 550px;
+    }
+
+    .FAQ .titulo h2 {
+        margin-bottom: -10px;
+    }
+
+    .FAQ .titulo button {
+        width: 600px;
+        height: 60px;
+    }
+
+    /*--------- EQUIPE ---------*/
+    .perfils img {
+        width: 296px;
+    }
+
+    .titulo-sem-traco h2 {
+        font-size: 20px;
+    }
+
+    .icon-perfil {
+        display: grid;
+        grid-template-columns: repeat(7, 70px);
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+}
