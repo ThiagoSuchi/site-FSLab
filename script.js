@@ -50,12 +50,16 @@ const slides = document.querySelectorAll(".slide");
 
 let currentIndex = 0;
 const contageSlide = slides.length;
+const larguraTela = window.innerWidth;
+
+console.log("ola", larguraTela)
 
 function proxSlide() {
-    currentIndex = (currentIndex + 1) % contageSlide; // Muda para o próximo slide e volta ao início se necessário
-    const desloc = -currentIndex * 100; // Calcula o deslocamento necessário
-    container.style.transform = `translateX(${desloc}%)`; // Aplica o deslocamento
-
+    if (larguraTela <= 425) {
+        currentIndex = (currentIndex + 1) % contageSlide; // Muda para o próximo slide e volta ao início se necessário
+        const desloc = -currentIndex * 100; // Calcula o deslocamento necessário
+        container.style.transform = `translateX(${desloc}%)`; // Aplica o deslocamento
+    }
 }
 
 

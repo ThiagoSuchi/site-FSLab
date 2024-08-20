@@ -143,7 +143,7 @@ body {
 
 .container div img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     cursor: pointer;
 }
@@ -551,7 +551,7 @@ body {
     .nav-list {
         position: absolute;
         z-index: 100;
-        top: 7vh;
+        top: 6vh;
         right: 0;
         width: 50vw;
         height: 94vh;
@@ -633,4 +633,39 @@ body {
         width: 100%;
         height: auto;
     }
+
+    /*---------- Quem somos ----------*/
+
+    .quem-somos {
+        max-height: 800px;
+    }
+
+    .quem-somos h2 {
+        padding: 0 90px;
+    }
+
+    .quem-somos .titulo>h2::after {
+        content: '';
+        position: absolute;
+        left: 90px;
+        right: 0;
+        bottom: -5px;
+        width: 30px;
+        height: 2px;
+        background-color: var(--cor-padrao);
+        border-radius: 2px;
+    }
+
+    .paragrafo {
+        padding: 0 50px 0 100px;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .paragrafo p {
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    /*---------- FAQ ------ */
 }
