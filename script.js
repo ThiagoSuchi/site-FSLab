@@ -1,7 +1,7 @@
 //----------------- CABEÇALHO MENU-MOBILE ----------------------//
 class MobileScript {
-    constructor(menuMobile, navList, navLinks) {
-        this.menuMobile = document.querySelector(menuMobile);
+    constructor(mobileMenu, navList, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
         this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
@@ -11,22 +11,22 @@ class MobileScript {
 
     animateLinks() {
         this.navLinks.forEach((link, index) => {
-            link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+            link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade .3s ease forwards ${index / 7 + 0.3}s`);
         })
     }
 
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
-        this.menuMobile.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
         this.animateLinks();
     }
 
     addClickEvent() {
-        this.menuMobile.addEventListener("click", this.handleClick);
+        this.mobileMenu.addEventListener("click", this.handleClick);
     }
 
     init() {
-        if (this.menuMobile) {
+        if (this.mobileMenu) {
             this.addClickEvent();
         }
         return this;
@@ -45,23 +45,32 @@ mobileScript.init();
 //------------------------ PROJETOS CAROUSEL -------------------------//
 
 
-const container = document.getElementById("imagem");
-const slides = document.querySelectorAll(".slide");
+const imgs = document.getElementById('imagem');
+const img = document.querySelectorAll('#imagem img');
 
-let currentIndex = 0;
-const contageSlide = slides.length;
-const larguraTela = window.innerWidth;
+const tamanhoTela = window.innerWidth;
 
-console.log("ola", larguraTela)
+let idX = 0;
 
-function proxSlide() {
-    if (larguraTela <= 425) {
-        currentIndex = (currentIndex + 1) % contageSlide; // Muda para o próximo slide e volta ao início se necessário
-        const desloc = -currentIndex * 100; // Calcula o deslocamento necessário
-        container.style.transform = `translateX(${desloc}%)`; // Aplica o deslocamento
+console.log(tamanhoTela);
+
+function carousel() {
+    idX++;
+
+    if(idX > img.length - 1){
+        idX = 0;
+    }
+
+    imgs.style.transform = `translateX(${-idX * 412}px)`;
+}
+
+function startCarousel() {
+    if(tamanhoTela <= 430) {// Verifica se a largura da tela é menor ou igual a 430px
+       setInterval(carousel, 1800); 
+    } else {
+        imgs.style.transform = `translateX(0)`;// Se for maior que 425px, não ativa o carrossel
     }
 }
 
+window.onload = startCarousel;// Aqui ira executar a função quando a pagina for recarregada.
 
-// Configura o carrossel para mudar de slide a cada 3 segundos (3000 ms) apenas em telas pequenas
-setInterval(proxSlide, 1800);

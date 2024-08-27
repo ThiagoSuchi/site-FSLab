@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <section class="menu">
+    <section class="menu" id="menu">
         <div class="cabecalho-menu">
             <nav>
                 <div class="menu-mobile">
@@ -26,11 +26,11 @@
                     <div class="line3"></div>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="#" class="estilo-menu">Iinicio</a></li>
-                    <li><a href="#" class="estilo-menu">Projetos</a></li>
-                    <li><a href="#" class="estilo-menu">Quem somos</a></li>
-                    <li><a href="#" class="estilo-menu">FAQ</a></li>
-                    <li><a href="#" class="estilo-menu">Equipe</a></li>
+                    <li><a href="#menu" class="estilo-menu">Iinicio</a></li>
+                    <li><a href="#projetos" class="estilo-menu">Projetos</a></li>
+                    <li><a href="#quem-somos" class="estilo-menu">Quem somos</a></li>
+                    <li><a href="#FAQ" class="estilo-menu">FAQ</a></li>
+                    <li><a href="#equipe" class="estilo-menu">Equipe</a></li>
                 </ul><!--nav-list-->
             </nav>
         </div><!--cabecalho-menu-->
@@ -38,30 +38,32 @@
 
     <section class="topo-site">
         <div class="FSLab">
-            <div class="obscure"></div>
             <img id='fslab' src="./imgs/Group 38.svg" alt="">
         </div><!--FSLab-->
     </section><!--topo-site-->
 
-    <section class="projetos">
+    <section class="projetos" id="projetos">
         <div class="titulo">
             <h2>Projetos desenvolvidos</h2>
         </div>
-        <div class="container" id="imagem">
-            <div class="slide" id="PD1"><img src="./imgs/build confidence.png" alt=""></div>
-            <div class="slide" id="PD2"><img src="./imgs/dialogos sobre a base.png" alt=""></div>
-            <div class="slide" id="PD3"><img src="./imgs/digitalize.png" alt=""></div>
-            <div class="slide" id="PD4"><img src="./imgs/semana da ciencia.png" alt=""></div>
-            <div class="slide" id="PD5"><img src="./imgs/favro.png" alt=""></div>
-            <div class="slide" id="PD6"><img src="./imgs/IV INPP.png" alt=""></div>
+        <div class="carrosel">
+            <div class="container" id="imagem">
+                <div class="slide" id="PD1"><img src="./imgs/build confidence.png" alt=""></div>
+                <div class="slide" id="PD2"><img src="./imgs/dialogos sobre a base.png" alt=""></div>
+                <div class="slide" id="PD3"><img src="./imgs/digitalize.png" alt=""></div>
+                <div class="slide" id="PD4"><img src="./imgs/semana da ciencia.png" alt=""></div>
+                <div class="slide" id="PD5"><img src="./imgs/favro.png" alt=""></div>
+                <div class="slide" id="PD6"><img src="./imgs/IV INPP.png" alt=""></div>
+            </div>
         </div>
     </section><!--projetos-->
 
-    <section class="quem-somos">
+    <section class="quem-somos" id="quem-somos">
         <div class="projetos projetos1">
-            <img id="video" src="./imgs/video.svg" alt="">
             <div class="titulo titulo-quem-somos">
                 <h2>Quem somos</h2>
+            </div><!--titulo-->
+            <div class="vdo-paragrafo">
                 <div class="paragrafo">
                     <p>Implementar políticas públicas associadas a tecnologias da informação e comunicação que atendam
                         as expectativas dos cidadãos e melhorem a qualidade dos serviços públicos, são desafios
@@ -74,28 +76,41 @@
                         do município.</p>
                     <p>A duração prevista do projeto é de 18 meses, com investimentos de R$ 4.000.000,00 (quatro milhões
                         de reais).</p>
-                </div>
-            </div><!--titulo-->
+                </div><!--vdo-paragrafo-->
+                <img id="video" src="./imgs/video.svg" alt="">
+            </div>
         </div><!--projetos">-->
     </section><!--quem-somos-->
 
-    <section class="FAQ">
+    <section class="FAQ" id="FAQ">
         <div class="projetos">
             <div class="titulo titulo-FAQ">
                 <h2>FAQ</h2>
                 <div>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
-                    <button><p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png"></button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
+                    <button>
+                        <p>1 - Como participar do FSLab?</p><img src="./imgs/Vector.png">
+                    </button>
                 </div>
             </div>
         </div>
     </section><!--FAQ-->
 
-    <section class="equipe">
+    <section class="equipe" id="equipe">
         <div class="projetos">
             <div class="titulo-sem-traco">
                 <h2>Equipe</h2>
@@ -151,7 +166,7 @@
     <section class="footer">
         <div class="logos-footer">
             <img id="img1" src="./imgs/logo IFRO.png" alt="">
-            <img id="img2" src="./imgs/logo FSLab.png" alt="">
+            <img id="img2" src="./imgs/Group 38.svg" alt="">
         </div>
     </section><!--footer-->
     <script src="script.js"></script>

@@ -29,31 +29,36 @@
 html,
 body {
     background-color: var(--cor-fundo);
-    overflow-x: hidden;
 }
-
 
 /*----------- CABEÇALHO -------------*/
 
 .cabecalho-menu {
-    padding: 27px 20px;
+    height: 4vw;
     background-color: var(--cor-cabecalho);
-}
-
-.cabecalho-menu nav ul {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .cabecalho-menu nav a {
     color: var(--cor-cabecalho-li);
-    padding-left: 40px;
     font-size: 18px;
     font-weight: 400;
     position: relative;
 }
 
-.cabecalho-menu nav a::after {
+.nav-list {
+    padding-left: 4vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+/* Volta aqui */
+.nav-list a::after {
     content: " ";
     position: absolute;
     left: 0;
@@ -66,34 +71,19 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-.cabecalho-menu nav a:hover::after {
+.nav-list a:hover::after {
     width: 50%;
 }
 
 /*------------- TOPO SITE --------------*/
 
-.obscure {
-    height: 100%;
-    width: 100%;
-    opacity: 0.6;
-    background-color: var(--cor-sombreamento);
-    z-index: 2;
-}
-
-#fslab {
-    position: absolute;
-    z-index: 3;
-}
-
 .FSLab {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 512px;
+    height: 50vh;
     z-index: 1;
-
-    background-image: url(./imgs/pexels-christina-morillo-1181244\ 1.png);
+    background-image: linear-gradient(rgba(60, 60, 59, 0.7), rgba(60, 60, 59, 0.9)), url(./imgs/pexels-christina-morillo-1181244%201.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -101,14 +91,14 @@ body {
 /*------------------ Projetos Desenvolvidos -------------------*/
 
 .projetos {
-    padding: 47px 77px;
+    padding: 2% 5%;
 }
 
 .titulo>h2 {
     position: relative;
     font-weight: 400;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .titulo>h2::after {
@@ -130,20 +120,18 @@ body {
         'PD1 PD2 PD3 PD3'
         'PD4 PD4 PD3 PD3'
         'PD4 PD4 PD5 PD6';
-    height: 675px;
-    gap: 7px;
+    height: 65vh;
+    gap: 0.3vw;
 }
 
-.container div {
-    background-color: white;
+.slide {
     border: 2px solid gray;
-    position: relative;
     overflow: hidden;
 }
 
-.container div img {
+.slide img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
 }
@@ -213,19 +201,14 @@ body {
 .quem-somos {
     display: flex;
     align-items: center;
-    height: 549px;
+    height: 55vh;
     background-color: var(--cor-quemSomos);
-}
-
-.projetos1 {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
 }
 
 .projetos1 img {
     cursor: pointer;
+    width: 45%;
+    height: 40%;
     transition: .2s ease-in-out;
     border: 1px solid var(--cor-fundo);
 }
@@ -235,27 +218,36 @@ body {
     border: 1px solid var(--cor-padrao);
 }
 
-.titulo-quem-somos {
-    margin-right: 80px;
+.quem-somos .titulo {
+    margin-bottom: 5vh;
 }
 
-.quem-somos p {
+.vdo-paragrafo {
+    display: flex;
+}
+
+.paragrafo p {
     font-size: 20px;
-    padding-top: 30px;
+    margin-right: 5vw;
 }
 
-.quem-somos h2 {
-    margin-top: -90px;
-    margin-bottom: 34px;
+.paragrafo {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw
 }
 
 /*--------------- FAQ ---------------*/
 
+.FAQ {
+    height: 70vh;
+}
+
 .titulo-FAQ div {
     display: flex;
     flex-direction: column;
-    padding: 40px 0px;
-    gap: 8px;
+    padding: 4vw 0px;
+    gap: 0.8vw;
 }
 
 .titulo-FAQ div button {
@@ -265,8 +257,8 @@ body {
     background-color: var(--cor-form);
 
     font-size: 20px;
-    height: 60px;
-    padding: 10px;
+    height: 6vh;
+    padding: 1vw;
     border: none;
     cursor: pointer;
     transition: .1s;
@@ -277,12 +269,12 @@ body {
 }
 
 .titulo-FAQ div button p {
-    padding-left: 30px;
+    padding-left: 3vw;
 }
 
 .titulo-FAQ div button img {
-    width: 30px;
-    padding-right: 10px;
+    width: 1.3vw;
+    padding-right: 1vw;
 }
 
 
@@ -297,8 +289,8 @@ body {
 }
 
 .perfils img {
-    margin: 0 3px 40px;
-    width: 470px;
+    margin: 0 0.3vw 4vw;
+    width: 20vw;
     border: 1px solid var(--cor-quemSomos);
     transition: .3s;
     cursor: pointer;
@@ -311,9 +303,9 @@ body {
 
 .icon-perfil {
     display: grid;
-    grid-template-columns: repeat(14, 100px);
+    grid-template-columns: repeat(14, 5vw);
     justify-content: center;
-    gap: 10px;
+    gap: 1vw;
 }
 
 .icon-perfil img {
@@ -336,14 +328,14 @@ body {
 /*------------------ FALE CONOSCO -------------------*/
 
 .fale-conosco {
-    height: 611px;
+    height: 60vh;
 }
 
 /*------------------ FOOTER ----------------------*/
 
 .footer {
     background-color: var(--cor-footer);
-    height: 208px;
+    height: 16vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -354,223 +346,163 @@ body {
 }
 
 #img1 {
-    width: 252px;
-    height: 62px;
+    height: 8vh;
 }
 
 #img2 {
-    width: 140px;
-    height: 65px;
+    height: 9vh;
 }
 
+/*-------------- RESPONSIVIDADE ---------------*/
 
-
-/************************ RESPONSIVIDADE ************************/
 
 @media screen and (max-width: 1440px) {
 
-    /*--------- QUEM SOMOS ---------*/
-    #video {
-        width: 700px;
+    /*-------- CABECALHO -------------*/
+    .cabecalho-menu {
+        height: 8vh;
     }
 
-    .quem-somos h2 {
-        margin-bottom: 10px;
+    /*------ Quem somos -----*/
+    .quem-somos {
+        display: block;
+        height: 50vh;
     }
 
-    .quem-somos p {
-        font-size: 16px;
-        padding-top: 16px;
+    .paragrafo p {
+        font-size: 15px;
     }
 
-    /*--------- EQUIPE ---------*/
-    .perfils img {
-        width: 300px;
+    /*------- FAQ -------*/
+    .FAQ {
+        height: 62vh;
     }
 
+    /*-------- EQUIPE ----------*/
     .icon-perfil {
         display: grid;
-        grid-template-columns: repeat(14, 80px);
+        grid-template-columns: repeat(14, 6vw);
+        gap: 1vw;
     }
 
-    .icon-perfil img {
-        width: 70px;
-    }
-}
-
-@media screen and (max-width: 1380px) {
-
-    /*--------- QUEM SOMOS ---------*/
-    .quem-somos {
-        height: 800px;
-    }
-
-    .quem-somos img {
-        margin-top: 50px;
-        margin-bottom: -90px;
-    }
-
-    .projetos1 {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .quem-somos p {
-        padding-top: 15px;
-    }
-
-    .quem-somos h2 {
-        margin-bottom: 10px;
-    }
 }
 
 @media screen and (max-width: 1024px) {
-
-    /*---------- CABECALHO MENU ------------*/
-    .cabecalho-menu nav ul {
-        gap: 20px;
+    .titulo h2 {
+        font-size: 2.3vw;
     }
 
-    .cabecalho-menu nav ul li a {
-        padding-left: 10px;
+    .titulo-sem-traco h2 {
+        font-size: 2.3vw;
     }
 
-    /*--------- TOPO SITE ----------*/
-    #fslab {
-        width: 230px;
+    /*-------- CABECALHO -------------*/
+    .nav-list li a {
+        font-size: 1.5vw;
     }
 
-    /*--------- QUEM SOMOS ---------*/
-    .quem-somos .titulo {
-        width: 90%;
-        padding-left: 90px;
+    /*------ Quem somos -----*/
+    .quem-somos {
+        display: block;
+        height: 50vh;
     }
 
-    .quem-somos img {
-        margin-top: 30px;
-        margin-bottom: -70px;
+    .paragrafo p {
+        font-size: 13px;
     }
 
-    /*--------- EQUIPE ---------*/
-    .perfils img {
-        width: 200px;
-    }
-
+    /*----------- EQUIPE ----------*/
     .icon-perfil {
-        display: grid;
-        grid-template-columns: repeat(14, 50px);
+        gap: 5px;
     }
 
     .icon-perfil img {
-        width: 50px;
+        width: 6vw;
     }
 }
 
 @media screen and (max-width: 768px) {
 
-    .titulo h2 {
-        font-size: 20px;
-    }
-
-    /*--------- CABECALHO MENU ----------*/
-    .cabecalho-menu nav ul li a {
-        font-size: 14px;
-    }
-
-    /*--------- QUEM SOMOS ---------*/
+    /*--------QUEM SOMOS--------*/
     .quem-somos {
-        display: flex;
-        justify-content: center;
-        height: 750px;
+        height: 70vh;
     }
 
-    .quem-somos .titulo {
-        width: 500px;
-        padding-left: 5%;
-    }
-
-    .quem-somos #video {
-        width: 70%;
-    }
-
-    /*----------- FAQ -----------*/
-    .FAQ {
+    .quem-somos .vdo-paragrafo {
         display: flex;
         align-items: center;
-        height: 550px;
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .FAQ .titulo h2 {
-        margin-bottom: -10px;
+    .quem-somos .paragrafo {
+        margin-left: 5vw;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html, body {
+        overflow-x: hidden;
     }
 
-    .FAQ .titulo button {
-        width: 600px;
-        height: 60px;
-    }
-
-    /*--------- EQUIPE ---------*/
-    .perfils img {
-        width: 296px;
+    .titulo h2 {
+        font-size: 20px;
     }
 
     .titulo-sem-traco h2 {
         font-size: 20px;
     }
 
-    .icon-perfil {
-        display: grid;
-        grid-template-columns: repeat(7, 70px);
-        justify-content: center;
-        gap: 10px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-
-    /*-------- CABECALHO LISTA-MENU --------*/
-    html {
-        overflow-x: hidden;
+    /*-----------CABEÇALHO----------*/
+    .cabecalho-menu {
+        position: fixed;
+        width: 100%;
+        z-index: 11;
     }
 
     .menu-mobile {
         cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 18px;
     }
 
     .menu-mobile div {
         width: 32px;
         height: 2px;
-        background: var(--cor-botaoMenu);
+        background: white;
         margin: 8px;
         transition: .3s;
     }
 
     .nav-list {
         position: absolute;
-        z-index: 100;
-        top: 6vh;
-        right: 0;
-        width: 50vw;
-        height: 94vh;
+        top: 7vh;
+        right: 100vw;
+        width: 60vw;
+        height: 93vh;
         background: var(--cor-cabecalho);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+        transition: .3s ease-in-out;
+        border-bottom-right-radius: 10px;
+    }
+
+    .nav-list .estilo-menu {
+        font-size: 16px;
     }
 
     .nav-list.active {
-        transform: translateX(0);
+        right: 40vw;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
     }
 
     @keyframes navLinkFade {
         from {
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateX(-50px);
         }
 
         to {
@@ -591,81 +523,86 @@ body {
         transform: rotate(45deg) translate(-5px, -7px);
     }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    /*------------- PROJETOS -----------*/
-
+    /*-----------PROJETOS---------------*/
     .projetos {
-        position: relative;
-        padding: 13px;
+        height: 50vh;
     }
-
-    .container {
-        background-color: transparent;
-        height: 300px;
+    
+    .carrosel {
         display: flex;
-        gap: 0;
-        transition: transform 0.5s ease-in-out;
+    }
+    
+    .container {
+        display: flex;
+        background: none;
+        gap: 30px;
+        transition: transform .5s ease-in-out;
         transform: translateX(0);
     }
-
-    .container div {
-        background-color: white;
-        border: none;
-        overflow: hidden;
-    }
-
-    .container div img {
-        object-fit: cover;
-        width: 400px;
-        height: 300px;
-    }
-
+    
     .slide {
-        min-width: 100%;
-        box-sizing: border-box;
+        border: none;
     }
 
     .slide img {
-        width: 100%;
-        height: auto;
+        height: 40vh;
+        width: 90vw;
     }
-
-    /*---------- Quem somos ----------*/
+    /*----------QUEM SOMOS-----------*/
 
     .quem-somos {
-        max-height: 800px;
-    }
-
-    .quem-somos h2 {
-        padding: 0 90px;
-    }
-
-    .quem-somos .titulo>h2::after {
-        content: '';
-        position: absolute;
-        left: 90px;
-        right: 0;
-        bottom: -5px;
-        width: 30px;
-        height: 2px;
-        background-color: var(--cor-padrao);
-        border-radius: 2px;
-    }
-
-    .paragrafo {
-        padding: 0 50px 0 100px;
-        margin: 0 auto;
-        max-width: 400px;
+        height: 92vh;
     }
 
     .paragrafo p {
         text-align: justify;
-        font-size: 14px;
     }
 
-    /*---------- FAQ ------ */
+    .vdo-paragrafo img {
+        width: 80vw;
+    }
+
+    /*---------------------FAQ---------------------*/
+    .FAQ {
+        height: 54vh;
+    }
+
+    .FAQ div button img {
+        width: 6vw;
+    }
+
+    /*--------------EQUIPE---------------*/
+    .equipe {
+        height: 72vh;
+    }
+    
+    .perfils {
+        display: grid;
+        grid-template-columns: repeat(2, 50vw);
+    }
+    
+    .perfils img {
+        width: 40vw;
+    }
+
+    .icon-perfil {
+        display: grid;
+        grid-template-columns: repeat(7, 7vw);
+        gap: 20px;
+    }
+
+    .icon-perfil img {
+        width: 10vw;
+    }
+
+    /*----------FOOTER---------*/
+    .logos-footer {
+        display: flex;
+        align-items: center;
+    }
+
+    .logos-footer img {
+        width: 40vw;
+        margin: 0 6vw;
+    }
 }
